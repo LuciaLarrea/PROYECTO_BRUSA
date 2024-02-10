@@ -1,0 +1,100 @@
+
+//CONTACTOS//
+
+.containernosotrosgeneral {
+
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+.containercontactos {
+    background-color: rgb(127, 133, 133);
+    margin-top: 10px;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    .contactos {
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10% 8px 10%;
+    }
+
+    .horizontalcontainer {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    
+        .containercontactos h2{
+
+            color: azure;
+            margin-left: 10px;
+        }    
+
+        .alineartexto{
+            align-items:center;
+            justify-content: center;
+        }
+
+        .fondoderechosreservados{
+            background-color: black;
+        }
+    }
+
+}
+
+}
+
+.h2 {
+    font-family:cursive;
+}
+
+.fondoderechosreservados{
+    background-color: black;
+}
+
+.containercontactos {
+    background-color: rgb(127, 133, 133);
+    margin-top: 15px;
+    border-radius: 4px;
+    margin: 2px 2px 2px 2px;
+
+    .contactos {
+        justify-content: space-between;
+        padding: 8px 10% 8px 10%;
+    }
+
+    .horizontalcontainer {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    
+        .containercontactos h2{
+            color: azure;
+            margin-left: 10px;
+        }    
+
+        .alineartexto{
+            align-items:center;
+            justify-content:left;
+        }
+    }
+
+}
+
+.fondoderechosreservados{
+    background-color: black;
+    text-align: center;
+}
+
+.nav__ul{
+    background-color: #ffc25a;
+    color: #17ad57;
+    font-weight: bold;
+}
+
+.nav__ulgeneral {
+    color: #5261a8;
+    font-weight: bold;
+}
+

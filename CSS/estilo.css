@@ -1,0 +1,587 @@
+.containernosotrosgeneral {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.containernosotrosgeneral .containercontactos {
+  background-color: rgb(127, 133, 133);
+  margin-top: 10px;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.containernosotrosgeneral .containercontactos .contactos {
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10% 8px 10%;
+}
+.containernosotrosgeneral .containercontactos .horizontalcontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.containernosotrosgeneral .containercontactos .horizontalcontainer .containercontactos h2 {
+  color: azure;
+  margin-left: 10px;
+}
+.containernosotrosgeneral .containercontactos .horizontalcontainer .alineartexto {
+  align-items: center;
+  justify-content: center;
+}
+.containernosotrosgeneral .containercontactos .horizontalcontainer .fondoderechosreservados {
+  background-color: black;
+}
+
+.h2 {
+  font-family: cursive;
+}
+
+.fondoderechosreservados {
+  background-color: black;
+}
+
+.containercontactos {
+  background-color: rgb(127, 133, 133);
+  margin-top: 15px;
+  border-radius: 4px;
+  margin: 2px 2px 2px 2px;
+}
+.containercontactos .contactos {
+  justify-content: space-between;
+  padding: 8px 10% 8px 10%;
+}
+.containercontactos .horizontalcontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.containercontactos .horizontalcontainer .containercontactos h2 {
+  color: azure;
+  margin-left: 10px;
+}
+.containercontactos .horizontalcontainer .alineartexto {
+  align-items: center;
+  justify-content: left;
+}
+
+.fondoderechosreservados {
+  background-color: black;
+  text-align: center;
+}
+
+.nav__ul {
+  background-color: #ffc25a;
+  color: #17ad57;
+  font-weight: bold;
+}
+
+.nav__ulgeneral {
+  color: #5261a8;
+  font-weight: bold;
+}
+
+.contenedorgeneralmayor {
+  margin-top: 50px;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.contenedorgeneralmayor .fondoderechosreservados {
+  background-color: black;
+  text-align: center;
+}
+.contenedorgeneralmayor .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  display: flex;
+  justify-content: center;
+}
+.contenedorgeneralmayor .container .imagecontainer {
+  max-height: max-content;
+  width: 100%;
+}
+.contenedorgeneralmayor .container .imagecontainer .imagecontainer.active {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  max-height: fit-content;
+}
+.contenedorgeneralmayor .container .imagecontainer .imagecontainer.active .imagecontainer.active .imagecontainerindex {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  max-height: max-content;
+}
+.contenedorgeneralmayor .container .accentcontainer {
+  background-color: rgb(194, 121, 11);
+  margin-top: 10px;
+}
+.contenedorgeneralmayor .container .accentcontainer .accentcontainer h1 {
+  color: azure;
+  margin-left: 10px;
+}
+.contenedorgeneralmayor .container .accentcontainer .misioncontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .contenedorgeneralmayor .container .accentcontainer .misioncontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+}
+.contenedorgeneralmayor .container .accentcontainer .misioncontainer .descripcioncontainer {
+  padding: 8px;
+  margin: 4px;
+  background-color: white;
+  border: 2px black;
+}
+.contenedorgeneralmayor .container .accentcontainer .misioncontainer .descripcioncontainer .navbartexto {
+  font-family: "New Tegomin", serif;
+}
+.contenedorgeneralmayor .container .containercontactos {
+  background-color: rgb(127, 133, 133);
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.contenedorgeneralmayor .container .containercontactos .contactos {
+  justify-content: space-between;
+  padding: 8px 10% 8px 10%;
+}
+.contenedorgeneralmayor .container .containercontactos .horizontalcontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.contenedorgeneralmayor .container .containercontactos .horizontalcontainer .containercontactos h2 {
+  color: azure;
+  margin-left: 10px;
+}
+.contenedorgeneralmayor .container .containercontactos .horizontalcontainer .alineartexto {
+  align-items: center;
+  justify-content: left;
+}
+.contenedorgeneralmayor .navbartexto {
+  padding: 8px 10px 8px 10px;
+  font-family: "New Tegomin", serif;
+  font-size: 50px;
+  z-index: 1;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.iconofijo {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .headergeneral {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: none;
+  }
+  .misioncontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .mobiletextocontactos {
+    max-width: 20px;
+  }
+  .containerresenageneral {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2px;
+  }
+  .maximage {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+.imagecontainerindex {
+  max-height: max-content;
+  width: 100%;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-21 16:17:13
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.containernosotrosgeneral {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vw;
+}
+.containernosotrosgeneral .containernosotros {
+  background-color: rgb(231, 215, 121);
+  margin-top: 30px;
+  padding: 30px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-image: url("../IMG/texto-100-neutro-carbono-textura-natural_23-2149456303.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.containernosotrosgeneral .containernosotros .containernosotrosdiv h1 {
+  color: azure;
+  font-size: 45px;
+}
+.containernosotrosgeneral .descripcioncontainernosotros {
+  font-size: 35px;
+  z-index: 1;
+}
+@media only screen and (max-width: 768px) {
+  .containernosotrosgeneral .descripcioncontainernosotros {
+    font-size: 20px;
+  }
+}
+.containernosotrosgeneral .containerresenageneral {
+  width: 100%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .containernosotrosgeneral .containerresenageneral {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2px;
+  }
+}
+.containernosotrosgeneral .containerresenageneral .nosotrosiconosydetalle {
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.containernosotrosgeneral .containerresenageneral .nosotrosiconosydetalle .text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-29 22:59:38
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation flip-diagonal-2-tl
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-diagonal-2-tl {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+    transform: rotate3d(-1, 1, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+    transform: rotate3d(-1, 1, 0, -180deg);
+  }
+}
+@keyframes flip-diagonal-2-tl {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+    transform: rotate3d(-1, 1, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+    transform: rotate3d(-1, 1, 0, -180deg);
+  }
+}
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+    transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+    transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-12-2 18:9:34
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation wobble-ver-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes wobble-ver-left {
+  0%, 100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateY(-30px) rotate(-6deg);
+    transform: translateY(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateY(15px) rotate(6deg);
+    transform: translateY(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateY(-15px) rotate(-3.6deg);
+    transform: translateY(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateY(9px) rotate(2.4deg);
+    transform: translateY(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateY(-6px) rotate(-1.2deg);
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-ver-left {
+  0%, 100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateY(-30px) rotate(-6deg);
+    transform: translateY(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateY(15px) rotate(6deg);
+    transform: translateY(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateY(-15px) rotate(-3.6deg);
+    transform: translateY(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateY(9px) rotate(2.4deg);
+    transform: translateY(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateY(-6px) rotate(-1.2deg);
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+}
+.contenedorimagenresena {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 15px;
+}
+.contenedorimagenresena .imagecontainerbackground {
+  background-image: url("../IMG/ACONDICIONADOR-SOLIDO imagen 5.jpg");
+  padding: 10px;
+  width: 200vw;
+  height: 400px;
+  margin-top: 5px;
+}
+
+.textocentradoresena {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #125462;
+}
+@media only screen and (max-width: 768px) {
+  .textocentradoresena {
+    font-size: 20px;
+  }
+}
+.textocentradoresena .tracking-in-contract-bck-bottom {
+  -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.textogeneralresena {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .textogeneralresena {
+    font-size: 15px;
+  }
+}
+
+.containerresenageneral {
+  width: 100%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+.containerresenageneral .wobble-hor-bottom {
+  -webkit-animation: wobble-hor-bottom 0.8s both;
+  animation: wobble-hor-bottom 0.8s both;
+}
+.containerresenageneral .wobble-ver-left:hover {
+  -webkit-animation: wobble-ver-left 0.8s both;
+  animation: wobble-ver-left 0.8s both;
+}
+.containerresenageneral .colornombres {
+  color: #f6ada6;
+}
+.containerresenageneral .colornombres2 {
+  color: #ec5bab;
+}
+@media only screen and (max-width: 768px) {
+  .containerresenageneral {
+    font-size: 15px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.containerresenageneral .maxresenha {
+  align-items: center;
+}
+
+.contenedordejanosmensajemayor {
+  margin-top: 45px;
+}
+@media only screen and (max-width: 768px) {
+  .contenedordejanosmensajemayor .contenedordejanosmensajemenor {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+}
+.contenedordejanosmensajemayor .contenedordejanoscomentario {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.containerproductosgeneralmayor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px 60px 30px 60px;
+}
+.containerproductosgeneralmayor .productocontainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  flex-direction: column;
+  border-radius: 10px;
+  border-bottom: 20px;
+  border-top: 20px;
+  flex: 0.5;
+  padding: 45px;
+  align-items: center;
+}
+.containerproductosgeneralmayor .productocontainer .hoverimagennuestrosproductos:hover {
+  filter: opacity(0.5);
+}
+.containerproductosgeneralmayor .productocontainer .maximage {
+  width: 450px;
+  height: 450px;
+}
+@media only screen and (max-width: 768px) {
+  .containerproductosgeneralmayor .productocontainer .maximage {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+.contenedorcontacto {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+.contenedorcontacto .fondocontactosform {
+  background-color: darkslategrey;
+  width: 100%;
+  padding: 20px;
+}
+.contenedorcontacto .fondocontactosform .textocontactos {
+  flex: antiquewhite;
+}
+.contenedorcontacto .fondocontactosform .divformuariogral textarea {
+  width: 100%;
+}
+
+/*# sourceMappingURL=estilo.css.map */

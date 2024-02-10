@@ -1,0 +1,25 @@
+@use 'globales';
+
+$colors: antiquewhite;
+
+
+.contenedorcontacto {
+    display:flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+
+    .fondocontactosform{
+        background-color: darkslategrey;
+        width: 100%;
+        padding: 20px;
+
+        .textocontactos {
+            flex: antiquewhite;
+        }
+
+        .divformuariogral textarea{
+            width: 100%;
+        }
+    }
+}
