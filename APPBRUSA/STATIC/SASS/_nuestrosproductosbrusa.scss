@@ -6,6 +6,12 @@
     flex-wrap: wrap;
     padding: 30px 60px 30px 60px;
 
+    .productocontainerprecio{
+        display:flex;
+        justify-content:center;
+        max-width: 75%;
+    }
+
     .productocontainer{
         display: flex;
         justify-content:center;
