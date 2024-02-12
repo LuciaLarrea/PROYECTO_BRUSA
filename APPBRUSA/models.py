@@ -13,5 +13,3 @@ class Cliente(models.Model):
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField()
-
-
