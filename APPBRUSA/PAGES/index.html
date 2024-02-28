@@ -22,32 +22,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     </head>
-<div>
-    <nav class="navbar navbar-expand-md bg-light justify-content-md-center fixed-top nav__ul">
-        <div class="container-fluid nav__ul">
-          <button  class="bi bi-list" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active text-reset" aria-current="page" href="./">Home</a>
-              <a class="nav-link navbartexto text-reset" href="./NosotrosBrusa">Nosotros</a>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-reset" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Nuestros productos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-reset" href="./NuestrosProductosshampoo">Shampoo</a></li>
-                  <li><a class="dropdown-item text-reset" href="./NuestrosProductosacondicionador">Acondicionador</a></li>
-                </ul>
-              </li>
-              <a class="nav-link navbartexto text-reset" href="./ResenaBrusa">Nuestros clientes</a>
-              <a class="nav-link navbartexto text-reset" href="./ContactosBrusa">Contacto</a>
-            </div>
-          </div>
-        </div>
-    </nav>
-</div>
+
+    {% include './topbar_base.html' %}
+
 <body>
     <main class="contenedorgeneralmayor container-{breakpoint}">
 

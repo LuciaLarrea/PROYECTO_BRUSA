@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from APPBRUSA import forms, models
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView, DeleteView, DetailView, CreateView, UpdateView
+from django.urls import reverse_lazy
 
 # CAPA DE CONTROLLERS
 def inicio(request):
@@ -83,55 +90,31 @@ def resena_brusa(request):
         return render(request, 'APPBRUSA/PAGES/ResenaBrusa.html', contexto)
 
 
-# OTRA APP
+def login_request(request):
+        if request.method == 'POST':
+            form = AuthenticationForm(request, data = request.POST)
+        
+            if form.is_valid():
+                # Si pasó la validación de Django
+                usuario = form.cleaned_data.get('username')
+                contrasenia = form.cleaned_data.get('password')
+                user = authenticate(username= usuario, password=contrasenia)
+                login(request, user)            
+                return render(request, "APPBRUSA/PAGES/index.html", {"mensaje": f'Bienvenide {user.username}'})            
+        else:
+            form = AuthenticationForm()
+        
+        return render(request, "APPBRUSA/PAGES/login.html", {"form": form})
 
-
-"""
-def cursos(request):
-    if request.method == 'POST':
-        formulario = forms.Form_Curso(request.POST)
-        if formulario.is_valid():
-            informacion = formulario.cleaned_data
-            curso = models.Curso(nombre=informacion["curso"], camada=informacion["camada"])
-            curso.save()
-            return render(request, 'APPBRUSA/cursos.html')
-    else:
-        formulario = forms.Form_Curso()
-        contexto = {"formulario": formulario}
-        return render(request, "APPBRUSA/cursos.html", contexto)
-
-
-def profesores(request):
-    return render(request, 'APPBRUSA/profesores.html')
-
-
-def estudiantes(request):
-    return render(request, 'APPBRUSA/estudiantes.html')
-
-
-def entregables(request):
-    return render(request, 'APPBRUSA/entregables.html')
-
-
-def buscar(request):
-    if request.GET['camada']:
-        camada = request.GET['camada']
-        cursos = models.Curso.objects.filter(camada__icontains=camada)
-        return render(request, 'APPBRUSA/index.html', {'cursos': cursos, "camada": camada})
-    else:
-        respuesta = 'No enviaste datos'
-
-    return render(request, 'APPBRUSA/index.html', {'respuesta': respuesta})   
-
-def contacto(request):
-    if request.GET["nombre"]:
-        nombre = request.GET['nombre']
-        email = request.GET['email']
-        asunto = request.GET['asunto']
-        mensaje = request.GET['mensaje']
-
-        return render(request, 'APPBRUSA/index.html', {'nombre': nombre, "email": email, "asunto": asunto, "mensaje": mensaje})
-    else:
-        respuesta = 'No enviaste datos'
-
-    return render(request, 'APPBRUSA/index.html', {'respuesta': respuesta})"""
+    
+# Vista de registro
+def register_request(request):
+      if request.method == 'POST':
+            form = forms.Form_Registro(request.POST)
+            if form.is_valid():
+                  username = form.cleaned_data['username']
+                  form.save()
+                  return render(request,"APPBRUSA/PAGES/index.html", {"mensaje": f'Bienvenido {user.username}'})
+      else:
+            form = forms.Form_Registro()     
+      return render(request,"APPBRUSA/PAGES/register.html" ,  {"form":form})

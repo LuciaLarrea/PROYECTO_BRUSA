@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.urls import path
 from APPBRUSA import views
+from django.contrib.auth.views import LogoutView
 
 # esto es la estructura de la aplicacion web
 
@@ -25,6 +26,9 @@ urlpatterns = [
     path('ContactosBrusa', views.contactos_brusa, name="Contactos Brusa"),
     path('NuestrosProductosacondicionador', views.nuestrosproductosacondicionador_brusa, name="Productos Acondicionador Brusa"),
     path('NuestrosProductosshampoo', views.nuestrosproductosshampoo_brusa, name="Productos Shampoo Brusa"),
-    path('ResenaBrusa', views.resena_brusa, name="Reseña Brusa")
-
+    path('ResenaBrusa', views.resena_brusa, name="Reseña Brusa"),
+    path('login', views.login_request,name="Login"),
+    path('logout', LogoutView.as_view(template_name="APPBRUSA/PAGES/Logout.html",), name="Logout"),
+    path('register', views.register_request,name="Register"),
+        
 ]
