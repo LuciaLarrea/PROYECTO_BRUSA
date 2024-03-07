@@ -56,7 +56,7 @@ ROOT_URLCONF = 'PROYECTO_BRUSA.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR],
+        'DIRS': [BASE_DIR,BASE_DIR / "APPBRUSA/PAGES"], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

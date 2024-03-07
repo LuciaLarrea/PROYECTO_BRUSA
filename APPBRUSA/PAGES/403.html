@@ -27,46 +27,15 @@
 
         <div class="fondocontactosform container text-left .col-">
 
-
             
             <div class="divformuariogral">
                 {% block body %}
-
-                {% if user.is_authenticated %}
-
-                <h1>Listado de Clientes</h1>
-
-                <a href="{% url 'NuevoCliente' %}">Nuevo Cliente</a>
-                <form action="" method="GET">
-                    {% csrf_token %}
-                    {{formulario.as_p}}
-                    <input type="submit" value="Buscar">
-                </form>
-                {% if Clientes %}
-
-                {% for cliente in Clientes %}
                 
-                <li>Nombre: {{cliente.nombre}}
-                    <p>
-
- 
-                            <a href="{% url 'DetalleCliente' cliente.pk %}">Ver</a>
-                            |
-                            {% if user.is_superuser %}
-                            |
-                            <a href="{% url 'EditarCliente' cliente.pk %}">Editar</a>
-                            <a href="{% url 'BorrarCliente' cliente.pk %}">Borrar</a>
-                            {% endif %}
-
-                        
-                    </p>
-                </li>
-
-                {% endfor %}
-                {% else %}
-                <p>No se encontraron resultados.</p>
-                {% endif %}
-                {% endif %}               
+                <h1>No tiene permiso para editar clientes</h1>
+                
+                <button type='button'>
+                    <a class="navbar-brand" href="{% url 'Inicio' %}">Volver</a>
+                </button>
                 {% endblock body %}
             </div>
         </div>

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from APPBRUSA import forms, models
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm  
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DeleteView, DetailView, CreateView, UpdateView
@@ -155,13 +155,14 @@ class ClienteDetailView(DetailView):
     model = models.Cliente
     template_name = "APPBRUSA/PAGES/cliente_detalle.html"
       
-class ClienteCreateView(CreateView):
-    model = models.Cliente
+class ClienteCreateView(PermissionRequiredMixin, CreateView):
+    model = models.Cliente 
     permission_required = "user.is_superuser"
     template_name = "APPBRUSA/PAGES/cliente_crear.html"
     success_url = reverse_lazy('ListaClientes')
     fields = ['nombre', 'email']
-    
+    raise_exception = True
+        
 class ClienteUpdateView(LoginRequiredMixin, UpdateView):
     model = models.Cliente
     template_name = "APPBRUSA/PAGES/cliente_editar.html"

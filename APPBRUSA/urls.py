@@ -37,5 +37,5 @@ urlpatterns = [
     path('Cliente/<pk>', views.ClienteDetailView.as_view(), name="DetalleCliente"),
     path('Cliente/<pk>/editar', views.ClienteUpdateView.as_view(), name="EditarCliente"),
     path('Cliente/<pk>/borrar', views.ClienteDeleteView.as_view(), name="BorrarCliente"),
-        
+     
 ]
