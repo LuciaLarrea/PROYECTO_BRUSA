@@ -592,4 +592,11 @@
   width: 100%;
 }
 
+.contenedorcontacto {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+
 /*# sourceMappingURL=estilo.css.map */

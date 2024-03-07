@@ -28,7 +28,14 @@ urlpatterns = [
     path('NuestrosProductosshampoo', views.nuestrosproductosshampoo_brusa, name="Productos Shampoo Brusa"),
     path('ResenaBrusa', views.resena_brusa, name="Reseña Brusa"),
     path('login', views.login_request,name="Login"),
-    path('logout', LogoutView.as_view(template_name="APPBRUSA/PAGES/Logout.html",), name="Logout"),
+    path('Logout', LogoutView.as_view(template_name="APPBRUSA/PAGES/logout.html",), name="Logout"),
     path('register', views.register_request,name="Register"),
+    path('editar_perfil', views.editarPerfil, name="EditarPerfil"),
+    path('cambiarClave', views.CambiarClave.as_view(), name="CambiarClave"),
+    path('Cliente/lista', views.ClienteListView.as_view(), name="ListaClientes"),
+    path('Cliente/nuevo', views.ClienteCreateView.as_view(), name="NuevoCliente"),
+    path('Cliente/<pk>', views.ClienteDetailView.as_view(), name="DetalleCliente"),
+    path('Cliente/<pk>/editar', views.ClienteUpdateView.as_view(), name="EditarCliente"),
+    path('Cliente/<pk>/borrar', views.ClienteDeleteView.as_view(), name="BorrarCliente"),
         
 ]

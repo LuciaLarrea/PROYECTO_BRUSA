@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from APPBRUSA import forms, models
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm  
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DeleteView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
+
+
 
 # CAPA DE CONTROLLERS
 def inicio(request):
@@ -114,7 +116,61 @@ def register_request(request):
             if form.is_valid():
                   username = form.cleaned_data['username']
                   form.save()
-                  return render(request,"APPBRUSA/PAGES/index.html", {"mensaje": f'Bienvenido {user.username}'})
+                  return render(request,"APPBRUSA/PAGES/index.html", {"mensaje": f'Bienvenido {username}'})
       else:
             form = forms.Form_Registro()     
       return render(request,"APPBRUSA/PAGES/register.html" ,  {"form":form})
+  
+  # Vista para editar perfil
+@login_required
+def editarPerfil(request):
+    usuario = request.user
+    if request.method == 'POST':
+        miFormulario = forms.UserEditForm(request.POST, request.FILES, instance=request.user)
+        if miFormulario.is_valid():
+            if miFormulario.cleaned_data.get('imagen'):
+                if hasattr(usuario, 'avatar'):
+                    usuario.avatar.imagen = miFormulario.cleaned_data.get('imagen')
+                    usuario.avatar.save()
+                else:
+                    models.Avatar.objects.create(user=usuario, imagen=miFormulario.cleaned_data.get('imagen'))
+            miFormulario.save()
+            return render(request, "APPBRUSA/PAGES/index.html")
+    else:
+        miFormulario = forms.UserEditForm(instance=request.user)
+    return render(request, "APPBRUSA/PAGES/editar_perfil.html", {"miFormulario": miFormulario, "usuario": usuario})
+
+class CambiarClave(LoginRequiredMixin, PasswordChangeView):
+    template_name = 'APPBRUSA/PAGES/cambiar_clave.html'
+    success_url = reverse_lazy('EditarPerfil')
+    
+# CRUD
+# List views
+class ClienteListView(ListView):
+    model = models.Cliente
+    context_object_name = "Clientes"
+    template_name = "APPBRUSA/PAGES/cliente_lista.html"
+    
+class ClienteDetailView(DetailView):
+    model = models.Cliente
+    template_name = "APPBRUSA/PAGES/cliente_detalle.html"
+      
+class ClienteCreateView(CreateView):
+    model = models.Cliente
+    permission_required = "user.is_superuser"
+    template_name = "APPBRUSA/PAGES/cliente_crear.html"
+    success_url = reverse_lazy('ListaClientes')
+    fields = ['nombre', 'email']
+    
+class ClienteUpdateView(LoginRequiredMixin, UpdateView):
+    model = models.Cliente
+    template_name = "APPBRUSA/PAGES/cliente_editar.html"
+    success_url = reverse_lazy('ListaClientes')
+    fields = ['nombre', 'email']
+
+class ClienteDeleteView(LoginRequiredMixin, DeleteView):
+    model = models.Cliente
+    template_name = "APPBRUSA/PAGES/cliente_borrar.html"
+    success_url = reverse_lazy('ListaClientes')
+
+

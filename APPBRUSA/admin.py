@@ -5,3 +5,4 @@ from APPBRUSA import models
 admin.site.register(models.Contacto)
 admin.site.register(models.Cliente)
 admin.site.register(models.Producto)
+admin.site.register(models.Avatar)
